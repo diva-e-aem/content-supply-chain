@@ -206,7 +206,7 @@ header nav .nav-sections ul > li > ul > li {
     /* each top-level nav item */
     header nav .nav-sections .default-content-wrapper > ul > li {
         flex: 0 1 auto;
-        position: relative;
+        position: static; /* important: mega menu is relative to full nav-wrapper */
         list-style: none;
     }
 
@@ -218,6 +218,7 @@ header nav .nav-sections ul > li > ul > li {
         font-weight: 500;
         color: #111827;
         transition: background 0.15s;
+        margin: 0;
     }
 
     header nav .nav-sections .default-content-wrapper > ul > li > p:hover,
@@ -247,77 +248,75 @@ header nav .nav-sections ul > li > ul > li {
         top: 2px;
     }
 
-    /* ── DROPDOWN PANEL ── */
+    /* ── MEGA MENU PANEL ── */
     header nav .nav-sections .default-content-wrapper > ul > li > ul {
         display: none;
-        position: absolute;
-        top: calc(100% + 8px);
+        position: fixed;
+        top: 64px; /* same as nav height */
         left: 0;
-        min-width: 220px;
+        right: 0;
+        width: 100%;
         background: #ffffff;
-        border: 1px solid #e5e7eb;
-        border-radius: 8px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        padding: 8px 0;
+        border-top: 2px solid #1d4ed8;
+        border-bottom: 1px solid #e5e7eb;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        padding: 32px;
+        box-sizing: border-box;
         z-index: 100;
         white-space: initial;
+
+        /* 4-column grid — one column per level-2 item */
+        display: none;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
     }
 
     header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
-        display: block;
+        display: grid;
     }
 
-    /* small triangle pointer */
-    header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
-        content: '';
-        position: absolute;
-        top: -7px;
-        left: 20px;
-        width: 12px;
-        height: 12px;
-        background: #ffffff;
-        border-left: 1px solid #e5e7eb;
-        border-top: 1px solid #e5e7eb;
-        transform: rotate(45deg);
-    }
+    /* triangle pointer removed — full-width mega menu doesn't need it */
 
-    /* level-2 items (e.g. "Digital Consulting") */
+    /* level-2 items — column headers (e.g. "Digital Consulting") */
     header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
-        padding: 0;
-        font-weight: 600;
-        font-size: 13px;
+        padding: 0 24px 24px 0;
+        border-right: 1px solid #f3f4f6;
+        margin-right: 0;
+    }
+
+    header nav .nav-sections .default-content-wrapper > ul > li > ul > li:last-child {
+        border-right: none;
+        padding-right: 0;
     }
 
     header nav .nav-sections .default-content-wrapper > ul > li > ul > li > p {
-        margin: 0;
-        padding: 10px 20px 6px;
-        color: #374151;
-        font-weight: 600;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        border-bottom: 1px solid #f3f4f6;
+        margin: 0 0 16px 0;
+        padding: 0 0 12px 0;
+        color: #111827;
+        font-weight: 700;
+        font-size: 14px;
+        border-bottom: 1px solid #e5e7eb;
     }
 
     header nav .nav-sections .default-content-wrapper > ul > li > ul > li > p a {
-        color: inherit;
-        font-weight: 600;
+        color: #111827;
+        font-weight: 700;
+        text-decoration: none;
     }
 
     header nav .nav-sections .default-content-wrapper > ul > li > ul > li > p a:hover {
         color: #1d4ed8;
     }
 
-    /* level-3 items (e.g. "Audits", "Digital Business Consulting") */
+    /* level-3 items — links under each column */
     header nav .nav-sections .default-content-wrapper > ul > li > ul > li > ul {
         display: block !important;
         position: static !important;
         background: transparent;
-        padding: 4px 0 8px;
+        padding: 0;
         margin: 0;
         border: none;
         box-shadow: none;
-        white-space: initial;
         list-style: none;
     }
 
@@ -327,18 +326,18 @@ header nav .nav-sections ul > li > ul > li {
 
     header nav .nav-sections .default-content-wrapper > ul > li > ul > li > ul > li a {
         display: block;
-        padding: 7px 20px 7px 28px;
+        padding: 7px 0;
         font-size: 14px;
         font-weight: 400;
         color: #4b5563;
-        transition: background 0.15s, color 0.15s;
+        transition: color 0.15s, padding-left 0.15s;
         border-radius: 0;
+        text-decoration: none;
     }
 
     header nav .nav-sections .default-content-wrapper > ul > li > ul > li > ul > li a:hover {
-        background-color: #eff6ff;
         color: #1d4ed8;
-        padding-left: 32px;
+        padding-left: 6px;
     }
 }
 
