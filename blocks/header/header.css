@@ -5,7 +5,7 @@ header .nav-wrapper {
     z-index: 2;
     position: fixed;
     border-bottom: 1px solid #e5e7eb;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgb(0, 0, 0, 6%);
 }
 
 header nav {
@@ -256,17 +256,16 @@ header nav .nav-sections ul > li > ul > li {
         left: 0;
         right: 0;
         width: 100%;
-        background: #ffffff;
+        background: #fff;
         border-top: 2px solid #1d4ed8;
         border-bottom: 1px solid #e5e7eb;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 24px rgb(0, 0, 0, 10%);
         padding: 32px;
         box-sizing: border-box;
         z-index: 100;
         white-space: initial;
 
         /* 4-column grid — one column per level-2 item */
-        display: none;
         grid-template-columns: repeat(4, 1fr);
         gap: 0;
     }
