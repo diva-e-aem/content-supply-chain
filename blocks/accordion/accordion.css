@@ -1,12 +1,30 @@
-.accordion > div > div:first-child {
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+.accordion {
+  max-width: 700px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.accordion > div > div:last-child {
-    overflow: hidden;
-    transition: all 0.3s ease;
-    padding: 10px;
+.accordion-item {
+  border-bottom: 1px solid #eee;
+}
+
+.accordion-title {
+  padding: 16px;
+  font-weight: 600;
+  background: #f7f7f7;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.accordion-title:hover {
+  background: #efefef;
+}
+
+.accordion-content {
+  padding: 16px;
+  background: white;
+  line-height: 1.5;
 }
