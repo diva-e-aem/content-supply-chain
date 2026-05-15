@@ -1,0 +1,12 @@
+.accordion > div > div:first-child {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion > div > div:last-child {
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
