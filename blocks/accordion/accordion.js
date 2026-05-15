@@ -10,7 +10,8 @@ export function renderAccordion({ items = [] }) {
         <div class="accordion-title">${item.title}</div>
         <div class="accordion-content">${item.content}</div>
       </div>
-    ` )
+    `,
+    )
     .join('');
 
   return container;
