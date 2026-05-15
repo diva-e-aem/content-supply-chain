@@ -4,10 +4,9 @@ import { loadFragment } from '../fragment/fragment.js';
 export default async function decorate(block) {
   const footerMeta = getMetadata('footer');
 
-  const footerPath =
-    typeof footerMeta === 'string' && footerMeta.startsWith('/')
-      ? footerMeta
-      : '/content/site/footer';
+  const footerPath = typeof footerMeta === 'string' && footerMeta.startsWith('/')
+    ? footerMeta
+    : '/content/site/footer';
 
   let fragment;
 
