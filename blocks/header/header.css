@@ -221,6 +221,15 @@ header nav .nav-sections ul > li > ul > li {
         margin: 0;
     }
 
+    header nav .nav-sections .default-content-wrapper > ul > li > ul > li > p {
+        margin: 0 0 16px;
+        padding: 0 0 12px;
+        color: #111827;
+        font-weight: 700;
+        font-size: 14px;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
     header nav .nav-sections .default-content-wrapper > ul > li > p:hover,
     header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > p {
         background-color: #f3f4f6;
@@ -270,6 +279,17 @@ header nav .nav-sections ul > li > ul > li {
         gap: 0;
     }
 
+    header nav .nav-sections .default-content-wrapper > ul > li > ul > li > ul {
+        display: block !important;
+        position: static !important;
+        background: transparent;
+        padding: 0;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+        list-style: none;
+    }
+
     header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
         display: grid;
     }
@@ -283,44 +303,20 @@ header nav .nav-sections ul > li > ul > li {
         margin-right: 0;
     }
 
+    header nav .nav-sections .default-content-wrapper > ul > li > ul > li > ul > li {
+        padding: 0;
+    }
+
     header nav .nav-sections .default-content-wrapper > ul > li > ul > li:last-child {
         border-right: none;
         padding-right: 0;
     }
 
-    header nav .nav-sections .default-content-wrapper > ul > li > ul > li > p {
-        margin: 0 0 16px;
-        padding: 0 0 12px;
-        color: #111827;
-        font-weight: 700;
-        font-size: 14px;
-        border-bottom: 1px solid #e5e7eb;
-    }
 
     header nav .nav-sections .default-content-wrapper > ul > li > ul > li > p a {
         color: #111827;
         font-weight: 700;
         text-decoration: none;
-    }
-
-    header nav .nav-sections .default-content-wrapper > ul > li > ul > li > p a:hover {
-        color: #1d4ed8;
-    }
-
-    /* level-3 items — links under each column */
-    header nav .nav-sections .default-content-wrapper > ul > li > ul > li > ul {
-        display: block !important;
-        position: static !important;
-        background: transparent;
-        padding: 0;
-        margin: 0;
-        border: none;
-        box-shadow: none;
-        list-style: none;
-    }
-
-    header nav .nav-sections .default-content-wrapper > ul > li > ul > li > ul > li {
-        padding: 0;
     }
 
     header nav .nav-sections .default-content-wrapper > ul > li > ul > li > ul > li a {
@@ -332,6 +328,10 @@ header nav .nav-sections ul > li > ul > li {
         transition: color 0.15s, padding-left 0.15s;
         border-radius: 0;
         text-decoration: none;
+    }
+
+    header nav .nav-sections .default-content-wrapper > ul > li > ul > li > p a:hover {
+        color: #1d4ed8;
     }
 
     header nav .nav-sections .default-content-wrapper > ul > li > ul > li > ul > li a:hover {
