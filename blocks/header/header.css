@@ -5,7 +5,7 @@ header .nav-wrapper {
     z-index: 2;
     position: fixed;
     border-bottom: 1px solid #e5e7eb;
-    box-shadow: 0 2px 8px rgb(0, 0, 0, 6%);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
 }
 
 header nav {
@@ -259,7 +259,7 @@ header nav .nav-sections ul > li > ul > li {
         background: #fff;
         border-top: 2px solid #1d4ed8;
         border-bottom: 1px solid #e5e7eb;
-        box-shadow: 0 8px 24px rgb(0, 0, 0, 10%);
+        box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
         padding: 32px;
         box-sizing: border-box;
         z-index: 100;
@@ -289,8 +289,8 @@ header nav .nav-sections ul > li > ul > li {
     }
 
     header nav .nav-sections .default-content-wrapper > ul > li > ul > li > p {
-        margin: 0 0 16px 0;
-        padding: 0 0 12px 0;
+        margin: 0 0 16px;
+        padding: 0 0 12px;
         color: #111827;
         font-weight: 700;
         font-size: 14px;
